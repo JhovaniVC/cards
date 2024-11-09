@@ -1,0 +1,107 @@
+/* CSS Responsivo */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffc568;
+    font-size: 62.5%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    width: 50rem;
+    height: 20rem;
+    position: relative;
+}
+
+.svg-container {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    max-width: 50rem;
+    height: auto;
+}
+
+.mo-container {
+    width: 100%;
+    height: 100%;
+}
+
+.line {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+}
+
+.lttr {
+    fill: #763c8c;
+}
+
+.sound {
+    position: fixed;
+    color: #763c8c;
+    font-size: 1.6rem;
+    bottom: 1rem;
+    right: 1rem;
+    text-decoration: underline;
+    cursor: default;
+}
+
+.sound--off {
+    text-decoration: line-through;
+}
+
+/* Media Queries para hacer la animación responsive */
+
+/* Pantallas pequeñas (menores a 520px) */
+@media screen and (max-width: 520px) {
+    .container {
+        width: 90vw;
+        height: auto;
+    }
+
+    .svg-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .sound {
+        font-size: 1.2rem;
+        bottom: 0.5rem;
+        right: 0.5rem;
+    }
+}
+
+/* Pantallas medianas (entre 521px y 768px) */
+@media screen and (min-width: 521px) and (max-width: 768px) {
+    .container {
+        width: 70vw;
+        height: auto;
+    }
+
+    .sound {
+        font-size: 1.4rem;
+    }
+}
+
+/* Pantallas grandes (entre 769px y 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 60vw;
+        height: auto;
+    }
+}
